@@ -3,14 +3,23 @@
   "version": "1.0.0",
   "description": "Basicically and strictly download and upload packages into buckets services like S3 or Cloudinary",
   "main": "src/app.js",
+  "type": "module",
   "scripts": {
     "start": "node src/app.js",
+    "dev": "nodemon src/app",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Wale",
   "license": "ISC",
   "dependencies": {
+    "aws-sdk": "^2.903.0",
+    "dotenv": "^9.0.0",
     "express": "^4.17.1",
-    "logrocket": "^1.1.0"
+    "logrocket": "^1.1.0",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
   }
 }
