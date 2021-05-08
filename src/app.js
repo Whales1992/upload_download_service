@@ -1,10 +1,17 @@
-var express = require('express');
+import express from 'express';
+import dotenv from 'dotenv';
+import morgan from 'morgan';
+import uploadRoute from './routes/uploadRoute.js';
 var app = express();
-var {logger, authentication} = require('../middle-wares/index');
-var {download} = require('../api-routes/download');
 
-app.use(authentication);
-app.use('/api/download/', download);
+dotenv.config();
+
+if (process.env.NODE_ENV === 'development') {
+  app.use(morgan('dev'));
+}
+app.use(express.json());
+
+app.use('/api/upload/', uploadRoute);
 
 app.get('/', function (req, res) {
   res.send('Hello World!');
