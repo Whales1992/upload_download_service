@@ -1,0 +1,16 @@
+{
+  "name": "download_upload_service",
+  "version": "1.0.0",
+  "description": "Basicically and strictly download and upload packages into buckets services like S3 or Cloudinary",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Wale",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "logrocket": "^1.1.0"
+  }
+}
